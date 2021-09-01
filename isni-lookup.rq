@@ -26,7 +26,7 @@ SELECT DISTINCT ?person ?id ?_isni
 WHERE {
 ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
 ?person schema:sameAs ?id.
-FILTER(?id = ?_isni).
+FILTER(regex(?id, ?isni, 'i')).
 }
 }
 } GROUP BY ?person ?id 

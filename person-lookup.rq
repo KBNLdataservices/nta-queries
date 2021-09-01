@@ -4,6 +4,7 @@
 #+ tags:
 #+  - NTA
 #+  - Names
+#+     Put in string, find out matching person names in the NTA 
 
 PREFIX schema: <http://schema.org/>   
 

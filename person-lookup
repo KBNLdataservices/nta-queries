@@ -1,0 +1,14 @@
+#+ person-lookup:
+#+ endpoint: http://data.bibliotheken.nl/sparql
+#+ method: GET
+#+ tags:
+#+  - NTA
+#+  - Names
+
+PREFIX schema: <http://schema.org/>   
+
+select ?s ?naam where {
+  ?s a schema:Person .
+  ?s schema:name ?naam .
+  FILTER(regex(?naam, ?_name, 'i'))
+} limit 1000

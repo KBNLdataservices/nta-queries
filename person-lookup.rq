@@ -7,8 +7,8 @@
 
 PREFIX schema: <http://schema.org/>   
 
-select ?s ?naam where {
-  ?s a schema:Person .
-  ?s schema:name ?naam .
-  FILTER(regex(?naam, ?_name, 'i'))
+select ?person ?name where {
+  ?person a schema:Person .
+  ?person schema:name ?name .
+  FILTER(regex(?name, ?_name, 'i'))
 } limit 1000

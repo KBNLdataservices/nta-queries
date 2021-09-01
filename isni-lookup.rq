@@ -1,7 +1,6 @@
 #+ isni-lookup:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET
-#+ transform: json
 #+ tags:
 #+  - NTA
 #+  - ISNI

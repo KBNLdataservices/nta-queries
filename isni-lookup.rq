@@ -8,25 +8,25 @@
 PREFIX schema: <http://schema.org/>   
 
 SELECT DISTINCT
-?id ?person 
-(GROUP_CONCAT(DISTINCT(?isni); separator="****") as ?isnis)
-(GROUP_CONCAT(DISTINCT(?nta); separator="****") as ?ntas)
-(GROUP_CONCAT(DISTINCT(?viaf); separator="****") as ?viafs)
-(GROUP_CONCAT(DISTINCT(?wikidata); separator="****") as ?wikidatas)
+?person 
+(GROUP_CONCAT(DISTINCT(?isni1); separator="****") as ?isni)
+(GROUP_CONCAT(DISTINCT(?nta1); separator="****") as ?nta)
+(GROUP_CONCAT(DISTINCT(?viaf1); separator="****") as ?viaf)
+(GROUP_CONCAT(DISTINCT(?wikidata1); separator="****") as ?wikidata)
 
 WHERE{
 ?person schema:sameAs ?x .
-bind(STRAFTER(STR(?x),"http://viaf.org/viaf/") AS ?viaf).
-bind(STRAFTER(STR(?x),"http://www.wikidata.org/entity/") AS ?wikidata).
-bind(STRAFTER(STR(?x),"https://isni.org/isni/") AS ?isni).  
-bind(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta).
-  
+bind(STRAFTER(STR(?x),"http://isni.org/isni/") AS ?isni1). 
+bind(STRAFTER(STR(?x),"http://viaf.org/viaf/") AS ?viaf1).
+bind(STRAFTER(STR(?x),"http://www.wikidata.org/entity/") AS ?wikidata1).
+bind(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta1).
+
 {
-SELECT DISTINCT ?person ?id ?_isni 
+SELECT DISTINCT ?person ?id  
 WHERE {
 ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
 ?person schema:sameAs ?id.
-FILTER(regex(?id, ?isni, 'i')).
+FILTER(regex(?id, ?_isni, 'i')).
 }
 }
 } GROUP BY ?person ?id 

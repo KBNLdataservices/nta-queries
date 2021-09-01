@@ -1,4 +1,4 @@
-#+     Put in string, find out matching person names in the NTA 
+#+ Put in string, find out matching person names in the NTA 
 #+ person-lookup:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET

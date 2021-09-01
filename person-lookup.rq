@@ -4,7 +4,6 @@
 #+ method: GET
 #+ tags:
 #+  - NTA
-#+  - Names
 
 PREFIX schema: <http://schema.org/>   
 

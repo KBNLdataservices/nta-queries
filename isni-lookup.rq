@@ -5,7 +5,7 @@
 PREFIX schema: <http://schema.org/>   
 
 SELECT DISTINCT
-?id ?person ?_isni
+?id ?person 
 #(GROUP_CONCAT(DISTINCT(?_isni); separator="****") as ?isnis)
 (GROUP_CONCAT(DISTINCT(?nta); separator="****") as ?ntas)
 (GROUP_CONCAT(DISTINCT(?viaf); separator="****") as ?viafs)
@@ -17,7 +17,7 @@ bind(STRAFTER(STR(?x),"http://viaf.org/viaf/") AS ?viaf).
 bind(STRAFTER(STR(?x),"http://www.wikidata.org/entity/") AS ?wikidata).
 bind(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta).
 {
-SELECT DISTINCT ?person ?id ?_isni
+SELECT DISTINCT ?person ?id  
 WHERE {
 ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
 ?person schema:sameAs ?id.

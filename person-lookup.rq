@@ -1,11 +1,10 @@
-#+ Put in string, find out matching person names in the NTA 
+#+ summary: Put in string, find out matching person names in the NTA 
 #+ person-lookup:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET
 #+ tags:
 #+  - NTA
 #+  - Names
-
 
 PREFIX schema: <http://schema.org/>   
 

@@ -7,6 +7,10 @@ Input: http://grlc.io/ (service) + eg. https://github.com/KBNLdataservices/nta-q
 
 Output: http://grlc.io/api/kbnldataservices/nta-queries (API)
 
+Docs:
+- https://github.com/CLARIAH/grlc
+- https://github.com/CLARIAH/grlc/wiki/Quick-tutorial#create-your-linked-data-api
+- https://www.slideshare.net/albertmeronyo/grlc-bridging-the-gap-between-restful-apis-and-linked-data
 
 ## ISNI lookup
 API call examples
@@ -17,7 +21,5 @@ API call examples
 ## Person lookup
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/person-lookup?name=mulisch
 
-Docs:
-- https://github.com/CLARIAH/grlc
-- https://www.slideshare.net/albertmeronyo/grlc-bridging-the-gap-between-restful-apis-and-linked-data
+
 

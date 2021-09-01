@@ -11,4 +11,4 @@ select ?person ?name where {
   ?person a schema:Person .
   ?person schema:name ?name .
   FILTER(regex(?name, ?_name, 'i'))
-} limit 1000
+} limit 100

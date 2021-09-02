@@ -1,4 +1,6 @@
 #+ summary: List all NTA-ids (in the NTA set) with their corresponding VIAF, ISNI and Wikidata identifiers
+#+ description: List all NTA-ids (in the NTA set) with their corresponding VIAF, ISNI and Wikidata identifiers
+#+ endpoint_in_url: False
 #+ list-nta-viaf-isni-wdq:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET

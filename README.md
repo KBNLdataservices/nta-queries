@@ -21,5 +21,7 @@ API call examples
 ## Person lookup
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/person-lookup?name=mulisch
 
+## list-nta-viaf-isni-wdq
+- http://grlc.io/api-git/KBNLdataservices/nta-queries/list-nta-viaf-isni-wdq?page=1
 
 

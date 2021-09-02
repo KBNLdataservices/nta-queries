@@ -6,7 +6,6 @@
 #+ method: GET
 #+ tags:
 #+  - NTA
-#+  - ISNI
 
 PREFIX schema: <http://schema.org/>   
 

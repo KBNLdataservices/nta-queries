@@ -6,7 +6,7 @@
 #+ method: GET
 #+ tags:
 #+  - NTA
-#+  - ISNI
+#+  - Wikidata
 
 PREFIX schema: <http://schema.org/>   
 

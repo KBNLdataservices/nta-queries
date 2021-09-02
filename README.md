@@ -27,7 +27,7 @@ API call examples (slow)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.json?isni=0000000029132470 (JSON)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.csv?isni=0000000029132470 (CSV)
 
-## wikidata-lookup 	
+## wikidata-lookup --> does not work properly yet
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/wikidata-lookup?wikidata=Q927 (slow)
 
 ## list-nta-viaf-isni-wdq (1000 nta-ids per page)

@@ -2,7 +2,7 @@
 #+ list-nta-viaf-isni-wdq:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET
-#+ pagination: 100
+#+ pagination: 5000
 #+ tags:
 #+  - NTA
 #+  - ISNI
@@ -19,4 +19,4 @@ BIND(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta).
 BIND(STRAFTER(STR(?id),"http://www.isni.org/isni/") AS ?isni).
 BIND(STRAFTER(STR(?id),"http://viaf.org/viaf/") AS ?viaf).
 BIND(STRAFTER(STR(?id),"http://www.wikidata.org/entity/") AS ?wikidata).
-} LIMIT 1000
+} 

@@ -12,13 +12,13 @@ Docs:
 - https://github.com/CLARIAH/grlc/wiki/Quick-tutorial#create-your-linked-data-api
 - https://www.slideshare.net/albertmeronyo/grlc-bridging-the-gap-between-restful-apis-and-linked-data
 
-## ISNI lookup
+## isni-lookup
 API call examples
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup?isni=0000000029132470 (HTML)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.json?isni=0000000029132470 (JSON)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.csv?isni=0000000029132470 (CSV)
 
-## Person lookup
+## person-lookup
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/person-lookup?name=mulisch
 
 ## list-nta-viaf-isni-wdq

@@ -22,4 +22,5 @@ BIND(STRAFTER(STR(?id),"http://www.isni.org/isni/") AS ?isni).
 BIND(STRAFTER(STR(?id),"http://viaf.org/viaf/") AS ?viaf).
 BIND(STRAFTER(STR(?id),"http://www.wikidata.org/entity/") AS ?wikidata).
 } 
+ORDER BY ?wikidata
 LIMIT 5000

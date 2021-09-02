@@ -13,25 +13,21 @@ Docs:
 - https://www.slideshare.net/albertmeronyo/grlc-bridging-the-gap-between-restful-apis-and-linked-data
 
 ## person-search
-(slow)
-- http://grlc.io/api-git/KBNLdataservices/nta-queries/person-search?name=mulisch
+- http://grlc.io/api-git/KBNLdataservices/nta-queries/person-search?name=mulisch (slow)
 
 ## nta-lookup
-(slow)
 
 ## isni-lookup
-(slow)
-API call examples
+API call examples (slow)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup?isni=0000000029132470 (HTML)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.json?isni=0000000029132470 (JSON)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/isni-lookup.csv?isni=0000000029132470 (CSV)
 
 ## viaf-lookup 	
-(slow)
-- http://grlc.io/api-git/KBNLdataservices/nta-queries/viaf-lookup?viaf=49234516
+- http://grlc.io/api-git/KBNLdataservices/nta-queries/viaf-lookup?viaf=49234516 (slow)
 
 ## wikidata-lookup 	
-(slow)
+- (slow)
 
 ## list-nta-viaf-isni-wdq (1000 nta-ids per page)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/list-nta-viaf-isni-wdq?page=1

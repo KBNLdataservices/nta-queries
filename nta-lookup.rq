@@ -10,9 +10,9 @@
 PREFIX schema: <http://schema.org/>   
 
 SELECT DISTINCT
-(GROUP_CONCAT(DISTINCT(?isni1); separator="") as ?isni)
 (GROUP_CONCAT(DISTINCT(?nta1); separator="") as ?nta)
 (GROUP_CONCAT(DISTINCT(?viaf1); separator="") as ?viaf)
+(GROUP_CONCAT(DISTINCT(?isni1); separator="") as ?isni)
 (GROUP_CONCAT(DISTINCT(?wikidata1); separator="") as ?wikidata)
 WHERE{
 ?person schema:sameAs ?x.

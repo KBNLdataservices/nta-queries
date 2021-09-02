@@ -10,7 +10,7 @@
 PREFIX schema: <http://schema.org/>   
 
 select ?person ?name where {
-  ?person a schema:Person .
+  ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
   ?person schema:name ?name .
   FILTER(regex(?name, ?_name, 'i'))
 } limit 1000

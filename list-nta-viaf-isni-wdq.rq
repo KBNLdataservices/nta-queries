@@ -14,16 +14,13 @@
 PREFIX schema: <http://schema.org/>   
 
 SELECT DISTINCT 
-(GROUP_CONCAT(DISTINCT(?isni1); separator="") as ?isni)
-(GROUP_CONCAT(DISTINCT(?nta1); separator="") as ?nta)
-(GROUP_CONCAT(DISTINCT(?viaf1); separator="") as ?viaf)
-(GROUP_CONCAT(DISTINCT(?wikidata1); separator="") as ?wikidata)
+?nta ?viaf ?isni ?wikidata
 WHERE{
 ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
 ?person schema:sameAs ?id.
-BIND(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta1).
-BIND(STRAFTER(STR(?id),"http://www.isni.org/isni/") AS ?isni1).
-BIND(STRAFTER(STR(?id),"http://viaf.org/viaf/") AS ?viaf1).
-BIND(STRAFTER(STR(?id),"http://www.wikidata.org/entity/") AS ?wikidata1).
+BIND(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta).
+BIND(STRAFTER(STR(?id),"http://www.isni.org/isni/") AS ?isni).
+BIND(STRAFTER(STR(?id),"http://viaf.org/viaf/") AS ?viaf).
+BIND(STRAFTER(STR(?id),"http://www.wikidata.org/entity/") AS ?wikidata).
 } 
 LIMIT 1000

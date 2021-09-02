@@ -29,6 +29,7 @@ API call examples (slow)
 
 ## wikidata-lookup --> does not work properly yet
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/wikidata-lookup?wikidata=Q927 (slow)
+- FILTER(regex(?id, ?_wikidata, 'i')). is too wide --> needs exact matching
 
 ## list-nta-viaf-isni-wdq (1000 nta-ids per page)
 - http://grlc.io/api-git/KBNLdataservices/nta-queries/list-nta-viaf-isni-wdq?page=1

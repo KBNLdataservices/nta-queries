@@ -1,7 +1,7 @@
 #+ summary: Put in NTA identifier, find out ISNI, VIAF and Wikidata identifiers
 #+ description: Put in NTA identifier, find out ISNI, VIAF and Wikidata identifiers
 #+ endpoint_in_url: False
-#+ isni-lookup:
+#+ nta-lookup:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET
 #+ tags:

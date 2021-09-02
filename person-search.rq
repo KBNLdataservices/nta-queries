@@ -1,5 +1,7 @@
 #+ summary: Put in string, find out matching person names in the NTA 
-#+ person-lookup:
+#+ description: Put in string, find out matching person names in the NTA 
+#+ endpoint_in_url: False
+#+ person-search:
 #+ endpoint: http://data.bibliotheken.nl/sparql
 #+ method: GET
 #+ tags:
@@ -11,4 +13,4 @@ select ?person ?name where {
   ?person a schema:Person .
   ?person schema:name ?name .
   FILTER(regex(?name, ?_name, 'i'))
-} limit 100
+} limit 1000

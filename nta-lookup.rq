@@ -1,0 +1,32 @@
+#+ summary: Put in NTA identifier, find out ISNI, VIAF and Wikidata identifiers
+#+ description: Put in NTA identifier, find out ISNI, VIAF and Wikidata identifiers
+#+ endpoint_in_url: False
+#+ isni-lookup:
+#+ endpoint: http://data.bibliotheken.nl/sparql
+#+ method: GET
+#+ tags:
+#+  - NTA
+#+  - ISNI
+
+PREFIX schema: <http://schema.org/>   
+
+SELECT DISTINCT
+(GROUP_CONCAT(DISTINCT(?isni1); separator="") as ?isni)
+(GROUP_CONCAT(DISTINCT(?nta1); separator="") as ?nta)
+(GROUP_CONCAT(DISTINCT(?viaf1); separator="") as ?viaf)
+(GROUP_CONCAT(DISTINCT(?wikidata1); separator="") as ?wikidata)
+WHERE{
+?person schema:sameAs ?x.
+BIND(STRAFTER(STR(?person),"http://data.bibliotheken.nl/id/thes/") AS ?nta1).
+BIND(STRAFTER(STR(?x),"http://www.isni.org/isni/") AS ?isni1).
+BIND(STRAFTER(STR(?x),"http://viaf.org/viaf/") AS ?viaf1).
+BIND(STRAFTER(STR(?x),"http://www.wikidata.org/entity/") AS ?wikidata1).
+{
+SELECT DISTINCT ?person ?id  
+WHERE {
+?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
+?person schema:sameAs ?id.
+FILTER(regex(?id, ?_nta, 'i')).
+}
+}
+}

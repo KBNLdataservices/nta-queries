@@ -21,11 +21,10 @@ BIND(STRAFTER(STR(?x),"http://www.isni.org/isni/") AS ?isni1).
 BIND(STRAFTER(STR(?x),"http://viaf.org/viaf/") AS ?viaf1).
 BIND(STRAFTER(STR(?x),"http://www.wikidata.org/entity/") AS ?wikidata1).
 {
-SELECT DISTINCT ?person ?id  
+SELECT DISTINCT ?person 
 WHERE {
 ?person schema:mainEntityOfPage/schema:isPartOf <http://data.bibliotheken.nl/id/dataset/persons> .
-?person schema:sameAs ?id.
-FILTER(regex(?id, ?_nta, 'i')).
+FILTER(regex(?person, ?_nta, 'i')).
 }
 }
 }
